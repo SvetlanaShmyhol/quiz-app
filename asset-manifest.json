@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.728ee5c0.css",
+    "main.js": "/static/js/main.74392319.js",
+    "static/media/Quizzle-logo.svg": "/static/media/Quizzle-logo.49bca24cf1de35495dda74bd50cb4469.svg",
+    "index.html": "/index.html",
+    "static/media/Close-icon.svg": "/static/media/Close-icon.24a3b58cb2393462ec09b1d32835c4c6.svg",
+    "main.728ee5c0.css.map": "/static/css/main.728ee5c0.css.map",
+    "main.74392319.js.map": "/static/js/main.74392319.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.728ee5c0.css",
+    "static/js/main.74392319.js"
+  ]
+}
