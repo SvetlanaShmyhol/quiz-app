@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+//     Fonts     //
+  --font-main: "Unbounded", sans-serif;
+  --font-accent: "Lato", sans-serif;
+
+//     Colors     //
+  --color-main: #0C001D;
+  --text-color: #000;
+	--text-color-white: #f5f5f5;
+  --color-white: #fff;
+  --color-violet: #8a52d6;
+  --color-dark-violet: #33175C;
+  --color-lite-violet: #C5A5EF;
+  --color-yellow: #ffc600;
+  --color-dark-yellow: #B47100;
+  --color-green: #9ad3b3;
+  --color-dark-green: #20553F;
+  --color-lite-green: #0F9D62;
+
+  --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}
+
+body {
+  margin: 0;
+  background-color: #0C001D;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logo {
+  width: auto;
+  height: 20px;
+  margin: 30px 0;
+}
+
+.section-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 104px);
+  margin: 50px;
+  background: linear-gradient(46deg, #2f2763 0%, #280c4d 53%, #412458 100%);
+  border: 2px solid #471A74;
+  align-items: center;
+  border-radius: 28px;
+  padding: 0 40px;
+
+  @media (max-width: 1200px) {
+    margin: 20px;
+    height: 100%;
+  }
+
+  &-quiz {
+    @media (max-width: 1200px) {
+      margin: 20px;
+      height: 100vh;
+    }
+  }
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-family: "Unbounded", system-ui;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 140%;
+  color: #f5f5f5;
+  text-align: center;
+  margin: 20px 0;
+
+  @media (max-width: 900px) {
+    font-size: 3rem;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 84px;
+    border-radius: 10px;
+    padding: 0 20px;
+
+    @media (max-width: 900px) {
+      height: 74px;
+    }
+
+    &-v {
+      background: #8a52d6;
+    }
+
+    &-g {
+      background: #9ad3b3;
+    }
+
+    &-y {
+      background: #ffc600;
+
+      @media (max-width: 900px) {
+        width: 54px;
+      }
+    }
+
+    svg:not(:last-child) {
+      margin: 0 16px 0 0;
+
+      @media (max-width: 900px) {
+        margin: 0;
+      }
+    }
+
+    svg {
+      @media (max-width: 900px) {
+        height: 54px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & :not(:last-child) {
+      padding-right: 16px;
+    }
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__line {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    align-items: center;
+
+    &-col {
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.hero-description {
+  font-family: var(--font-accent);
+  width: 60%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--text-color-white);
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+}
+
+.quiz-categories {
+  width: 100%;
+}
