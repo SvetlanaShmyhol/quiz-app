@@ -1,5 +1,6 @@
 {
   "name": "quiz-app",
+  "homepage": "https://svetlanashmyhol.github.io/quiz-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
