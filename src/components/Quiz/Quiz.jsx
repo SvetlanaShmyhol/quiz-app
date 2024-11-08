@@ -75,7 +75,7 @@ const Quiz = () => {
             </span>
           </h2>
           <div className={styles[`result-card-buttons`]}>
-            <a href={`/`}>
+            <a href={`/quiz-app`}>
               <button
                 className={`${styles['result-card-button']} ${
                   styles[`result-card-button-back`]
@@ -84,7 +84,7 @@ const Quiz = () => {
                 Back to the categories
               </button>
             </a>
-            <a href={`/quiz/${quizId}`}>
+            <a href={`/quiz-app/quiz/${quizId}`}>
               <button className={styles[`result-card-button`]}>
                 Try again
               </button>
@@ -100,7 +100,7 @@ const Quiz = () => {
                   <h2 className={styles[`card-title`]}>
                     {currentCategory.name}
                   </h2>
-                  <a className={styles[`card-button-close`]} href={`/`}>
+                  <a className={styles[`card-button-close`]} href={`/quiz-app`}>
                     <img src={CloseButton} alt="Close" />
                   </a>
                 </div>

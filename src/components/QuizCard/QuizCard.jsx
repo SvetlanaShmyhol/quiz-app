@@ -24,7 +24,7 @@ const QuizCard = () => {
           <div className={styles['quiz-card']}>
             <p className={styles[`quiz-card__top`]}>Quiz by theme</p>
             <h2 className={styles['quiz-card__title']}>{category.name}</h2>
-            <p className={styles['quiz-card__description']}>15 questions</p>
+            <p className={styles['quiz-card__description']}>5 questions</p>
           </div>
 
           <button
