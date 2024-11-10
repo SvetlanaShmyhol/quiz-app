@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Quiz.module.scss';
 import CloseButton from './../../img/Close-icon.svg';
 
@@ -75,7 +76,7 @@ const Quiz = () => {
             </span>
           </h2>
           <div className={styles[`result-card-buttons`]}>
-            <a href={`/quiz-app`}>
+            <Link to={`/`}>
               <button
                 className={`${styles['result-card-button']} ${
                   styles[`result-card-button-back`]
@@ -83,12 +84,16 @@ const Quiz = () => {
               >
                 Back to the categories
               </button>
-            </a>
-            <a href={`/quiz-app/quiz/${quizId}`}>
-              <button className={styles[`result-card-button`]}>
+            </Link>
+
+            <Link to={`/quiz/${quizId}`}>
+              <button
+                className={styles[`result-card-button`]}
+                onClick={() => window.location.reload()}
+              >
                 Try again
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       ) : (
@@ -100,9 +105,10 @@ const Quiz = () => {
                   <h2 className={styles[`card-title`]}>
                     {currentCategory.name}
                   </h2>
-                  <a className={styles[`card-button-close`]} href={`/quiz-app`}>
+
+                  <Link to={`/`} className={styles[`card-button-close`]}>
                     <img src={CloseButton} alt="Close" />
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
