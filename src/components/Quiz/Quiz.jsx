@@ -7,12 +7,17 @@ import CloseButton from './../../img/Close-icon.svg';
 
 const Quiz = () => {
   const { quizId } = useParams();
+  const [reload, setReload] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
   useEffect(() => {
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setShowScore(false);
+
     axios
       .get(
         `https://opentdb.com/api.php?amount=5&category=${quizId}&type=multiple&difficulty=easy`
@@ -31,7 +36,7 @@ const Quiz = () => {
       .catch((error) => {
         console.error('Error fetching questions:', error);
       });
-  }, [quizId]);
+  }, [quizId, reload]);
 
   const categories = [
     { id: 11, name: 'Films' },
@@ -89,7 +94,7 @@ const Quiz = () => {
             <Link to={`/quiz/${quizId}`}>
               <button
                 className={styles[`result-card-button`]}
-                onClick={() => window.location.reload()}
+                onClick={() => setReload((prev) => !prev)}
               >
                 Try again
               </button>
